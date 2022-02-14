@@ -1,12 +1,24 @@
 import {React, useEffect, useState} from "react"
 import {useForm} from "react-hook-form"
+import {useDispatch, useSelector} from "react-redux"
 import img1 from "../../../images/undraw_add_information_j2wg.svg"
+
 export default function User() {
+	// dispatch is user for redux data sending
+	// use selector is used for data fetchong from reducer
+	const dispatch = useDispatch()
+	const userState = useSelector(({user}) => user)
+
+	useEffect(() => {
+		console.log("userState", {userState})
+	}, [userState])
+
 	const [dataInput, setInput] = useState([])
 
 	const {register, handleSubmit} = useForm()
 	const onSubmit = (data, e) => {
-		setInput([data, ...dataInput])
+		// setInput([data, ...dataInput])
+		dispatch(data)
 	}
 
 	useEffect(() => {

@@ -1,10 +1,15 @@
+import React from "react"
+import { Provider } from "react-redux"
 import "./App.css"
 import AllRoutes from "./FrontEnd/AllRoutes"
+import store from "./Redux/store"
+
+
 function App() {
 	return (
-		<div className='App'>
+		<Provider store={store}>
 			<AllRoutes />
-		</div>
+		</Provider>
 	)
 }
 
