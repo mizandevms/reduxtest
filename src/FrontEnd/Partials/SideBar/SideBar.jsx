@@ -10,6 +10,9 @@ export default function SideBar() {
 			<Link to='/animation' className='py-2  font-bold   hover:underline'>
 				Animation Test
 			</Link>
+			<Link to='/login' className='py-2  font-bold   hover:underline'>
+				Login
+			</Link>
 		</div>
 	)
 }
