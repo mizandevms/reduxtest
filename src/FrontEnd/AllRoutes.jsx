@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import ForgetPassword from "./Components/Auth/ForgetPassword"
 import Login from "./Components/Auth/Login"
 import Register from "./Components/Auth/Register"
+import Test from "./Components/Test/Test"
 import User from "./Components/User/User"
 import SideBar from "./Partials/SideBar/SideBar"
 const Home = React.lazy(() => import("./Components/Home/Home"))
@@ -12,11 +13,11 @@ const AllRoutes = () => {
 	return (
 		<BrowserRouter>
 			{/* <Header /> */}
-			<div className='grid grid-cols-6 gap-4'>
+			<div className='grid grid-cols-6 '>
 				<div className='col-span-1'>
 					<SideBar />
 				</div>
-				<div className='App col-span-5 p-4'>
+				<div className='App col-span-5 '>
 					<Routes>
 						<Route
 							exact
@@ -112,6 +113,22 @@ const AllRoutes = () => {
 									// }
 								>
 									<ForgetPassword />
+								</React.Suspense>
+							}
+						/>
+						<Route
+							path='/test'
+							element={
+								<React.Suspense
+									fallback='Loading...'
+									//{
+									// 	<div className='flex justify-center items-center h-full w-full'>
+									// 		{/* <img className=' h-56 w-auto' src={loader} alt='loader' /> */}
+									// 		l
+									// 	</div>
+									// }
+								>
+									<Test />
 								</React.Suspense>
 							}
 						/>

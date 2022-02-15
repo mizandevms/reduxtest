@@ -13,6 +13,9 @@ export default function SideBar() {
 			<Link to='/login' className='py-2  font-bold   hover:underline'>
 				Login
 			</Link>
+			<Link to='/test' className='py-2  font-bold   hover:underline'>
+				Test
+			</Link>
 		</div>
 	)
 }
